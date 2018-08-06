@@ -5,13 +5,19 @@ models.db.sync({
 })
 .then(() => {
   console.log('this works');
-  return models.Vegetable.bulkCreate([{
+  const veggies = models.Vegetable.bulkCreate([{
     name: 'carrot',
     color: 'orange',
     planted_on: Date.now()
   }, {name: 'lettuce', color: 'green', planted_on: Date.now()},
   {name: 'radish', color: 'red', planted_on: Date.now()}])
+  return veggies;
 })
+.then((veggies) => {
+  console.log('veggies', veggies)
+  return models.Gardener.create({name: 'juliet', age: 24, favorite_vegetable: veggies});
+})
+// .then((models.Gardener) =>
 .catch(err => {
   console.log(err);
 })

@@ -24,6 +24,12 @@ const Plot = db.define('plot', {
 })
 
 const Vegetable = db.define('vegetable', {
+  veggieId: {
+    autoIncrement: true,
+    primaryKey: true,
+    type: Sequelize.INTEGER,
+    allowNull: false
+  },
   name: {
     type: Sequelize.STRING,
     allowNull: false
