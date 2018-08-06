@@ -13,5 +13,14 @@
     "pg": "^7.4.3",
     "pg-hstore": "^2.3.2",
     "sequelize": "^4.38.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awigdale/plantr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/awigdale/plantr/issues"
+  },
+  "homepage": "https://github.com/awigdale/plantr#readme"
 }
